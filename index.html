@@ -130,17 +130,17 @@
 <body>
 
 <div class="container">
-    <h1>🐯 안암 밥약 식당 추천봇</h1>
+    <h1> 안암 밥약 식당 추천봇</h1>
     <div class="subtitle">조건을 입력하시면 1분 안에 최적의 식당을 추천해 드립니다!</div>
 
     <form id="recommend-form" onsubmit="generateRecommendation(event)">
         <div class="form-group">
-            <label>📍 현재 위치 (출발지)</label>
+            <label> 현재 위치 (출발지)</label>
             <input type="text" placeholder="예: 정경대 후문, 신공학관, 참살이길" required>
         </div>
 
         <div class="form-group">
-            <label>💰 예산 (1인 기준)</label>
+            <label> 예산 (1인 기준)</label>
             <select required>
                 <option value="1">1만원 이하</option>
                 <option value="2">1만 ~ 1만 5천원</option>
@@ -150,7 +150,7 @@
         </div>
 
         <div class="form-group">
-            <label>🍕 음식 종류 (중복 선택 가능)</label>
+            <label> 음식 종류 (중복 선택 가능)</label>
             <div class="checkbox-group">
                 <label class="checkbox-item"><input type="checkbox" name="foodType" value="한식" checked>한식</label>
                 <label class="checkbox-item"><input type="checkbox" name="foodType" value="중식">중식</label>
@@ -174,7 +174,7 @@
             </div>
         </div>
 
-        <button type="submit">🔥 조건에 맞는 식당 추천받기</button>
+        <button type="submit"> 조건에 맞는 식당 추천받기</button>
     </form>
 
     <div id="result-section">
@@ -206,12 +206,12 @@
             card.innerHTML = `
                 <div class="restaurant-name">${rest.name} <span style="font-size:0.9rem; color:var(--ku-crimson);">[${rest.category}]</span></div>
                 <div class="restaurant-meta">
-                    <strong>📍 위치:</strong> ${rest.location} (${rest.time}) | <strong>💵 평균 가격:</strong> ${rest.price}<br>
-                    <strong>⏱️ 영업:</strong> ${rest.hours} | <strong>🪑 좌석수:</strong> ${rest.seats} | <strong>📞 문의:</strong> ${rest.phone}<br>
-                    <strong>⭐ 평점:</strong> ${rest.rating} | <strong>⏳ 예상 웨이팅:</strong> <span style="color:red; font-weight:bold;">${rest.waiting}</span>
+                    <strong> 위치:</strong> ${rest.location} (${rest.time}) | <strong> 평균 가격:</strong> ${rest.price}<br>
+                    <strong> 영업:</strong> ${rest.hours} | <strong> 좌석수:</strong> ${rest.seats} | <strong> 문의:</strong> ${rest.phone}<br>
+                    <strong> 평점:</strong> ${rest.rating} | <strong> 예상 웨이팅:</strong> <span style="color:red; font-weight:bold;">${rest.waiting}</span>
                 </div>
                 <div class="recommend-reason">
-                    <strong>💡 추천 이유:</strong> ${rest.reason}
+                    <strong> 추천 이유:</strong> ${rest.reason}
                 </div>
             `;
             listContainer.appendChild(card);
